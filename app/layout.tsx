@@ -13,6 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Gaurav Dubey",
   description: "Fullstack Developer",
+  icons: { icon: "/assets/sb.jpeg" },
   keywords: [
     "Gaurav Dubey",
     "gaurav",
@@ -38,9 +39,9 @@ export default function RootLayout({
         >
           <ActiveSectionContextProvider>
             <Cursor />
-            <Navbar devName="<GD/>" />
+            <Navbar devName="<SB/>" />
             {children}
-            <ContactNFooter devName="Gaurav" />
+            <ContactNFooter devName="SRiZA BiSWAS" />
             <ThemeToggle />
           </ActiveSectionContextProvider>
         </ThemeProvider>

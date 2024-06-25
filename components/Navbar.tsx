@@ -33,7 +33,7 @@ export default function Navbar({ devName }: { devName: string }) {
                   {
                     "text-[cyan]": activeSection === link?.name,
                   },
-                  "capitalize w-full flex-center px-3 py-3 transition hover:text-gray-300"
+                  "capitalize w-full flex-center px-3 py-3 transition hover:text-[cyan]"
                 )}
                 href={link?.hash}
                 onClick={() => {

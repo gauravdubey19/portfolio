@@ -9,8 +9,15 @@ import MagneticDiv from "./myui/MagnaticDiv";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { GiCloudDownload } from "react-icons/gi";
 import { useSectionInView } from "@/lib/hooks";
+import BlobbyEffect from "./myui/BlobbyEffect";
 
-export default function About() {
+export default function About({
+  devName,
+  resume,
+}: {
+  devName: string;
+  resume: string;
+}) {
   const { ref } = useSectionInView("about");
   const refDiv = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -39,21 +46,15 @@ export default function About() {
           <MagneticDiv
             className="w-full md:w-[75%] cursor-none ease-in-out duration-1000"
             component={
-              <Image
-                src="/assets/gd.png"
-                alt="gd"
-                width={400}
-                height={500}
-                className="w-full filter hover:drop-shadow-lg ease-in-out duration-500"
+              <BlobbyEffect
+                img="/assets/sb.jpeg"
+                className="h-[30rem] w-[30rem] hover:drop-shadow-lg ease-in-out duration-300"
               />
             }
             componentMobile={
-              <Image
-                src="/assets/gd.png"
-                alt="gd"
-                width={400}
-                height={500}
-                className="w-full lg:hidden filter drop-shadow-lg"
+              <BlobbyEffect
+                img="/assets/sb.jpeg"
+                className="h-[20rem] w-[20rem] drop-shadow-lg"
               />
             }
           />
@@ -62,26 +63,17 @@ export default function About() {
           <p className="a_text">
             My name is{" "}
             <Link
-              href="https://www.linkedin.com/in/gauravdubey19/"
+              href="https://github.com/SrizaBiswas"
               target="_blank"
               className="link text-[cyan] relative pb-[1.5px] after:content-[''] after:absolute after:w-0 after:h-px after:inline-block after:bg-[cyan] after:transition-[0.3s] after:left-0 after:bottom-0 hover:after:w-full"
               rel="noreferrer"
             >
-              Gaurav Dubey
+              {devName}
             </Link>{" "}
-            a budding full-stack developer who loves making great user
-            experiences.
+            who likes reading stories.....
           </p>
-          <p className="a_text">
-            I&#39;m excited to keep learning and building awesome projects with
-            new tech.
-          </p>
-          <Link
-            // href="/assets/gauravDubeyResume.pdf"
-            href="/#about"
-            target="_blank"
-            className="w-full md:w-fit"
-          >
+          <p className="a_text">more about me...</p>
+          <Link href={resume} target="_blank" className="w-full md:w-fit">
             <ButtonGooey
               text="Resume"
               icon={<GiCloudDownload size={20} className="animate-bounce" />}

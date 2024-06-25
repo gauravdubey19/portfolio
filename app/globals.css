@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --glow-rgb: 239 42 201;
+  --dark: #020716;
+  --light: #dfe7f3eb;
+}
+
 * {
   @apply scroll-smooth m-0 p-0;
   box-sizing: border-box;
@@ -21,12 +27,6 @@
 }
 .scrollDiv::-webkit-scrollbar {
   display: none;
-}
-
-:root {
-  --glow-rgb: 239 42 201;
-  --dark: #020716;
-  --light: #dfe7f3eb;
 }
 
 /* .theme {
@@ -68,15 +68,14 @@
   .text-balance {
     text-wrap: balance;
   }
-}
-.text-border-thick {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
-  /* -webkit-text-stroke-color: "ttext"; */
-}
-
-.a_text {
-  @apply text-[14.5px] text-left text-[color:var(--grey)] mb-2 md:text-lg md:text-justify tracking-wide;
+  .text-border-thick {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    /* -webkit-text-stroke-color: "ttext"; */
+  }
+  .a_text {
+    @apply text-[14.5px] text-left text-[color:var(--grey)] mb-2 md:text-lg md:text-justify tracking-wide;
+  }
 }
 
 .wrapper {
@@ -120,4 +119,9 @@
   font-family: "JetBrains Mono", monospace;
   list-style: none;
   -webkit-user-select: none;
+}
+
+/* Blobby Effect */
+.bg_cover {
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }

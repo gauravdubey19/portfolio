@@ -8,10 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      keyframes: {
+        liquid: {
+          "0%": { borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%" },
+          "50%": { borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%" },
+          "100%": { borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%" },
+        },
+      },
+      animation: {
+        liquid: "liquid 7s ease-in-out infinite",
+      },
+      colors: {
+        "light-gray": "rgb(234, 234, 234)",
       },
     },
   },

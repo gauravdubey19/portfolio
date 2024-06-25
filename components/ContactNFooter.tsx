@@ -79,8 +79,8 @@ const ContactNFooter = ({ devName }: { devName: string }) => {
               rel="noreferrer"
               className="transition hover:underline underline-offset-8 text-lg group"
             >
-              © {new Date().getFullYear()} || All rights by{" "}
-              <span className="group-hover:text-cyan-200 group-hover:scale-110 ease-in-out duration-300">
+              © {new Date().getFullYear()} || All rights reserved by{" "}
+              <span className="group-hover:text-cyan-300 group-hover:scale-110 ease-in-out duration-300">
                 {devName}
               </span>
               .
@@ -105,7 +105,7 @@ const contactLinks: ContactLink[] = [
   {
     id: 0,
     title: "email",
-    url: "mailto:dubeygaurav@gmail.com",
+    url: "mailto:srizabiswas@gmail.com",
     icon: (
       <FiMail className="group-hover:fill-[red] group-hover:scale-110 active:translate-y-1 ease-in-out duration-300" />
     ),
@@ -113,7 +113,7 @@ const contactLinks: ContactLink[] = [
   {
     id: 1,
     title: "github",
-    url: "https://github.com/gauravdubey19",
+    url: "https://github.com/SrizaBiswas",
     icon: (
       <FiGithub className="hover:fill-black hover:scale-125 active:translate-y-1 ease-in-out duration-300" />
     ),
@@ -121,7 +121,7 @@ const contactLinks: ContactLink[] = [
   {
     id: 2,
     title: "linkedin",
-    url: "https://linkedin.com/in/gauravdubey19",
+    url: "https://linkedin.com/in/SrizaBiswas",
     icon: (
       <FiLinkedin className="hover:fill-blue-500 hover:scale-125 active:translate-y-1 ease-in-out duration-300" />
     ),
@@ -129,7 +129,7 @@ const contactLinks: ContactLink[] = [
   {
     id: 3,
     title: "twitter",
-    url: "https://twitter.com/",
+    url: "https://twitter.com/SrizaBiswas",
     icon: (
       <FiTwitter className="hover:fill-cyan-600 hover:scale-125 active:translate-y-1 ease-in-out duration-300" />
     ),
