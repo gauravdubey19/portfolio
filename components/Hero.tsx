@@ -35,7 +35,12 @@ const Hero = ({ devName, desc }: { devName: string; desc: string }) => {
         animate={{ y: 0, x: 0, opacity: 1 }}
         className="z-10"
       >
-        <TextEffect>{devName}</TextEffect>
+        <span className="hidden md:flex">
+          <TextEffect>{devName}</TextEffect>
+        </span>
+        <span className="md:hidden text-center select-none cursor-none relative block text-7xl md:text-8xl lg:text-9xl text-balance whitespace-nowrap font-black uppercase">
+          {devName}
+        </span>
         <p className="text-md text-center font-light mt-4 ttext">{desc}</p>
       </motion.div>
       <div className="absolute bottom-0 z-10 w-full lg:w-96 p-4 group flex-center">
